@@ -1,16 +1,15 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class capsuleColor : MonoBehaviour
+public class capsuleColor1 : MonoBehaviour
 {
-    public GameObject capsulePrefab;
-    
+    public GameObject capsulePrefab1;
+
     public GameObject firstGO;
     public GameObject secondGO;
 
     private cubeColor scriptA;
     private sphereColor scriptB;
-    
+
     private Renderer myRenderer;
     public bool finalState;
 
@@ -25,7 +24,7 @@ public class capsuleColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void FixedUpdate()
@@ -36,7 +35,7 @@ public class capsuleColor : MonoBehaviour
         bool stateA = scriptA.changeColor;
         bool stateB = scriptB.changeColor;
 
-        finalState = stateA && stateB;
+        finalState = stateA || stateB;
 
         if (finalState)
         {

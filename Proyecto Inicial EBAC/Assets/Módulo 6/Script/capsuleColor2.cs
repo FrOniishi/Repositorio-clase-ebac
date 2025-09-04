@@ -1,31 +1,30 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class capsuleColor : MonoBehaviour
+public class capsuleColor2 : MonoBehaviour
 {
-    public GameObject capsulePrefab;
-    
-    public GameObject firstGO;
-    public GameObject secondGO;
+    public GameObject capsulePrefab2;
 
-    private cubeColor scriptA;
-    private sphereColor scriptB;
-    
+    public GameObject thirdGO;
+    public GameObject fourthGO;
+
+    private capsuleColor scriptA;
+    private capsuleColor1 scriptB;
+
     private Renderer myRenderer;
-    public bool finalState;
+    private bool finalState;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        scriptA = firstGO.GetComponent<cubeColor>();
-        scriptB = secondGO.GetComponent<sphereColor>();
+        scriptA = thirdGO.GetComponent<capsuleColor>();
+        scriptB = fourthGO.GetComponent<capsuleColor1>();
         myRenderer = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void FixedUpdate()
@@ -33,8 +32,8 @@ public class capsuleColor : MonoBehaviour
         /*Color c = new Color(Random.value, Random.value, Random.value);
         capsulePrefab.GetComponent<MeshRenderer>().material.color = c;*/
 
-        bool stateA = scriptA.changeColor;
-        bool stateB = scriptB.changeColor;
+        bool stateA = scriptA.finalState;
+        bool stateB = scriptB.finalState;
 
         finalState = stateA && stateB;
 
