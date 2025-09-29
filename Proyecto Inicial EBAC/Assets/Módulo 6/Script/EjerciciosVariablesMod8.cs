@@ -6,7 +6,7 @@ public class EjerciciosVariableMod8 : MonoBehaviour
 {
     private Renderer myRenderer;
 
-    public GameObject cubo; // Asigna el cubo desde el Inspector
+    public GameObject cubo;
 
     int numeroEntero = 0;
     int a = 5;
